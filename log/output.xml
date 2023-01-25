@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.2 on win32)" generated="20230125 16:13:37.949" rpa="false" schemaversion="3">
+<suite id="s1" name="Add Employee Test" source="C:\Mine\Company\LT7\orange_automation\2__employee_suite\01__add_employee_test.robot">
+<test id="s1-t1" name="Add Valid Employee Test_${test_name}" line="16">
+<kw name="Launch Browser And Navigate To Url" library="common_functionalities" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230125 16:13:39.078" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230125 16:13:39.078" endtime="20230125 16:13:40.478"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230125 16:13:40.478" endtime="20230125 16:13:40.600"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230125 16:13:40.600" endtime="20230125 16:13:40.600"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230125 16:13:40.600" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20230125 16:13:40.600" endtime="20230125 16:13:45.945"/>
+</kw>
+<status status="PASS" starttime="20230125 16:13:39.078" endtime="20230125 16:13:45.946"/>
+</kw>
+<kw name="Add Valid Employee Template">
+<arg>Admin</arg>
+<arg>admin123</arg>
+<arg>john</arg>
+<arg>ken</arg>
+<arg>j</arg>
+<arg>john ken</arg>
+<arg>john</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:13:45.949" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230125 16:13:45.948" endtime="20230125 16:13:46.699"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:13:46.715" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20230125 16:13:46.762" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230125 16:13:46.843" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230125 16:13:46.699" endtime="20230125 16:13:46.844"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[normalize-space()='Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:13:46.846" level="INFO">Clicking element 'xpath=//button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20230125 16:13:46.844" endtime="20230125 16:13:48.100"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[normalize-space()='PIM']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:13:48.103" level="INFO">Clicking element 'xpath=//a[normalize-space()='PIM']'.</msg>
+<status status="PASS" starttime="20230125 16:13:48.101" endtime="20230125 16:13:49.729"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Add Employee</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:13:49.730" level="INFO">Clicking element 'link=Add Employee'.</msg>
+<status status="PASS" starttime="20230125 16:13:49.729" endtime="20230125 16:13:51.056"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=firstName</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:13:51.057" level="INFO">Typing text 'john' into text field 'name=firstName'.</msg>
+<status status="PASS" starttime="20230125 16:13:51.057" endtime="20230125 16:13:51.505"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=middleName</arg>
+<arg>${middlename}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:13:51.507" level="INFO">Typing text 'j' into text field 'name=middleName'.</msg>
+<status status="PASS" starttime="20230125 16:13:51.506" endtime="20230125 16:13:51.599"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=lastName</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:13:51.600" level="INFO">Typing text 'ken' into text field 'name=lastName'.</msg>
+<status status="PASS" starttime="20230125 16:13:51.600" endtime="20230125 16:13:51.683"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230125 16:13:56.706" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230125 16:13:51.683" endtime="20230125 16:13:56.706"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[normalize-space()='Save']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:13:56.706" level="INFO">Clicking element 'xpath=//button[normalize-space()='Save']'.</msg>
+<status status="PASS" starttime="20230125 16:13:56.706" endtime="20230125 16:13:56.765"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${firstname}${SPACE}${lastname}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 16:13:56.766" endtime="20230125 16:14:01.304"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=//h6[contains(normalize-space(),'${firstname}')]</arg>
+<arg>${expected_fullname}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230125 16:14:01.352" level="INFO">Element 'xpath=//h6[contains(normalize-space(),'john')]' contains text 'john ken'.</msg>
+<status status="PASS" starttime="20230125 16:14:01.305" endtime="20230125 16:14:01.353"/>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>name=firstName</arg>
+<arg>value</arg>
+<arg>${expected_firstname}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20230125 16:14:01.390" level="INFO">Element 'name=firstName' attribute 'value' contains value 'john'.</msg>
+<status status="PASS" starttime="20230125 16:14:01.353" endtime="20230125 16:14:01.390"/>
+</kw>
+<status status="PASS" starttime="20230125 16:13:45.946" endtime="20230125 16:14:01.391"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230125 16:14:01.392" endtime="20230125 16:14:03.546"/>
+</kw>
+<status status="PASS" starttime="20230125 16:13:39.078" endtime="20230125 16:14:03.546"/>
+</test>
+<test id="s1-t2" name="Add Valid Employee Test_${test_name}" line="16">
+<kw name="Launch Browser And Navigate To Url" library="common_functionalities" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230125 16:14:03.546" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230125 16:14:03.546" endtime="20230125 16:14:04.826"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230125 16:14:04.827" endtime="20230125 16:14:04.952"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230125 16:14:04.952" endtime="20230125 16:14:04.952"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230125 16:14:04.952" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20230125 16:14:04.952" endtime="20230125 16:14:10.428"/>
+</kw>
+<status status="PASS" starttime="20230125 16:14:03.546" endtime="20230125 16:14:10.428"/>
+</kw>
+<kw name="Add Valid Employee Template">
+<arg>Admin</arg>
+<arg>admin123</arg>
+<arg>saul</arg>
+<arg>cal</arg>
+<arg>b</arg>
+<arg>saul cal</arg>
+<arg>saul</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:14:10.430" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230125 16:14:10.429" endtime="20230125 16:14:11.166"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:14:11.168" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20230125 16:14:11.199" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230125 16:14:11.271" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230125 16:14:11.166" endtime="20230125 16:14:11.271"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[normalize-space()='Login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:14:11.272" level="INFO">Clicking element 'xpath=//button[normalize-space()='Login']'.</msg>
+<status status="PASS" starttime="20230125 16:14:11.272" endtime="20230125 16:14:12.580"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[normalize-space()='PIM']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:14:12.581" level="INFO">Clicking element 'xpath=//a[normalize-space()='PIM']'.</msg>
+<status status="PASS" starttime="20230125 16:14:12.581" endtime="20230125 16:14:14.764"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Add Employee</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:14:14.766" level="INFO">Clicking element 'link=Add Employee'.</msg>
+<status status="PASS" starttime="20230125 16:14:14.765" endtime="20230125 16:14:16.036"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=firstName</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:14:16.038" level="INFO">Typing text 'saul' into text field 'name=firstName'.</msg>
+<status status="PASS" starttime="20230125 16:14:16.037" endtime="20230125 16:14:16.525"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=middleName</arg>
+<arg>${middlename}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:14:16.526" level="INFO">Typing text 'b' into text field 'name=middleName'.</msg>
+<status status="PASS" starttime="20230125 16:14:16.526" endtime="20230125 16:14:16.613"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=lastName</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:14:16.614" level="INFO">Typing text 'cal' into text field 'name=lastName'.</msg>
+<status status="PASS" starttime="20230125 16:14:16.613" endtime="20230125 16:14:16.709"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230125 16:14:21.714" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230125 16:14:16.709" endtime="20230125 16:14:21.714"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[normalize-space()='Save']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:14:21.714" level="INFO">Clicking element 'xpath=//button[normalize-space()='Save']'.</msg>
+<status status="PASS" starttime="20230125 16:14:21.714" endtime="20230125 16:14:21.774"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${firstname}${SPACE}${lastname}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 16:14:21.775" endtime="20230125 16:14:26.328"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=//h6[contains(normalize-space(),'${firstname}')]</arg>
+<arg>${expected_fullname}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230125 16:14:26.364" level="INFO">Element 'xpath=//h6[contains(normalize-space(),'saul')]' contains text 'saul cal'.</msg>
+<status status="PASS" starttime="20230125 16:14:26.328" endtime="20230125 16:14:26.364"/>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>name=firstName</arg>
+<arg>value</arg>
+<arg>${expected_firstname}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20230125 16:14:26.800" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230125 16:14:26.800" level="FAIL">Element 'name=firstName' attribute should have value 'saul' (str) but its value was '' (str).</msg>
+<status status="FAIL" starttime="20230125 16:14:26.364" endtime="20230125 16:14:26.800"/>
+</kw>
+<status status="FAIL" starttime="20230125 16:14:10.429" endtime="20230125 16:14:26.800"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230125 16:14:26.804" endtime="20230125 16:14:28.961"/>
+</kw>
+<status status="FAIL" starttime="20230125 16:14:03.546" endtime="20230125 16:14:28.961">Element 'name=firstName' attribute should have value 'saul' (str) but its value was '' (str).</status>
+</test>
+<doc>This file contains test cases for add valid employee
+records</doc>
+<status status="FAIL" starttime="20230125 16:13:37.965" endtime="20230125 16:14:28.961"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Add Employee Test">Add Employee Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230125 16:14:03.546" level="WARN">Multiple tests with name 'Add Valid Employee Test_${test_name}' executed in suite 'Add Employee Test'.</msg>
+</errors>
+</robot>
