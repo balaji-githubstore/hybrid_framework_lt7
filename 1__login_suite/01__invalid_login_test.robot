@@ -2,6 +2,7 @@
 Documentation       This file contains test cases related to invalid login
 
 Resource    ../resource/base/common_functionalities.resource
+Resource    ../resource/pages/LoginPage.resource
 
 Library     DataDriver    file=../test_data/orange_data.xlsx    sheet_name=InvalidLoginTest
 
@@ -17,7 +18,7 @@ Invalid Login Test
 *** Keywords ***
 Invalid Login Template
     [Arguments]     ${username}     ${password}     ${expected_error}
-    Input Text    name=username    ${username}
-    Input Password    name=password    ${password}
-    Click Element    xpath=//button[normalize-space()='Login']
+    Enter Username    ${username}
+    Enter Password    ${password}
+    Click Login
     Element Should Contain    xpath=//p[contains(@class,'oxd-alert')]    ${expected_error}
